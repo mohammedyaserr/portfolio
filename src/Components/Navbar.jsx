@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { User, Briefcase, Mail, Zap, Menu as MenuIcon, X } from 'lucide-react';
 import { 
   GitHub, 
-  Instagram, 
-  Twitter 
+  LinkedIn, 
+  Email,
+  Close as CloseIcon
 } from '@mui/icons-material';
 import { 
   Drawer, 
@@ -145,7 +146,7 @@ const Navbar = () => {
               onClick={handleDrawerToggle} 
               sx={{ color: 'var(--text-h)', mt: -0.5 }}
             >
-              <X size={24} />
+              <CloseIcon />
             </IconButton>
           </Box>
 
@@ -205,13 +206,14 @@ const Navbar = () => {
             </Box>
             <Box sx={{ display: 'flex', gap: 2 }}>
               {[
-                { icon: <GitHub sx={{ fontSize: 22 }} />, href: '#' },
-                { icon: <Instagram sx={{ fontSize: 22 }} />, href: '#' },
-                { icon: <Twitter sx={{ fontSize: 22 }} />, href: '#' },
+                { icon: <GitHub sx={{ fontSize: 22 }} />, href: "https://github.com/mohammedyaserr" },
+                { icon: <LinkedIn sx={{ fontSize: 22 }} />, href: "https://www.linkedin.com/in/mohammed-yaser-59a044333/" },
+                { icon: <Email sx={{ fontSize: 22 }} />, href: "mailto:mohammedyaserdev@gmail.com" },
               ].map((social, i) => (
                 <motion.a
                   key={i}
                   href={social.href}
+                  target={social.href.startsWith('http') ? "_blank" : undefined}
                   whileHover={{ scale: 1.2, color: 'var(--accent)' }}
                   style={{ color: 'var(--text-h)', textDecoration: 'none' }}
                 >
