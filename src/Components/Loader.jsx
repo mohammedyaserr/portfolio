@@ -15,16 +15,19 @@ const Loader = () => {
           className="loader-text"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Mohammed Yaser
+          Mohammed Yaser Portfolio
         </motion.h1>
-        <motion.div 
-          className="loader-line"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-        />
+        <div className="loader-line-container">
+          <motion.div 
+            className="loader-line"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.8, ease: "easeInOut" }}
+            style={{ originX: 0.5 }}
+          />
+        </div>
       </div>
     </motion.div>
   );
