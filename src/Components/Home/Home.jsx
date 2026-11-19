@@ -50,7 +50,7 @@ const Home = () => {
           transition={{ delay: 0.6 }}
         >
           <span className="home-role">Full Stack Developer</span>
-          <p className="home-subtitle">Specializing in building fast, scalable, and user-focused web applications with React.</p>
+
         </motion.div>
 
         <motion.div 
