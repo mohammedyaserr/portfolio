@@ -44,7 +44,7 @@ function App() {
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Nilambur",
+      "addressLocality": "Thrissur",
       "addressRegion": "Kerala",
       "addressCountry": "India"
     },
@@ -69,11 +69,11 @@ function App() {
         <title>Mohammed Yaser | Full Stack Developer (React, Node.js)</title>
         <meta 
           name="description" 
-          content="Mohammed Yaser is a Full Stack Developer based in Nilambur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
+          content="Mohammed Yaser is a Full Stack Developer based in Thrissur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
         />
         <meta 
           name="keywords" 
-          content="Mohammed Yaser, Full Stack Developer, React Developer, Node.js Developer, MERN Stack, Nilambur, Kerala, Web Developer Portfolio" 
+          content="Mohammed Yaser, Full Stack Developer, React Developer, Node.js Developer, MERN Stack, Thrissur, Kerala, Web Developer Portfolio" 
         />
         <link rel="canonical" href="https://mohammed-yaser-portfolio.vercel.app/" />
 
@@ -82,7 +82,7 @@ function App() {
         <meta property="og:title" content="Mohammed Yaser | Full Stack Developer (React, Node.js)" />
         <meta 
           property="og:description" 
-          content="Mohammed Yaser is a Full Stack Developer based in Nilambur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
+          content="Mohammed Yaser is a Full Stack Developer based in Thrissur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
         />
         <meta property="og:url" content="https://mohammed-yaser-portfolio.vercel.app/" />
         <meta property="og:image" content="https://mohammed-yaser-portfolio.vercel.app/og-image.png" />
@@ -96,7 +96,7 @@ function App() {
         <meta name="twitter:title" content="Mohammed Yaser | Full Stack Developer (React, Node.js)" />
         <meta 
           name="twitter:description" 
-          content="Mohammed Yaser is a Full Stack Developer based in Nilambur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
+          content="Mohammed Yaser is a Full Stack Developer based in Thrissur, Kerala, India, building modern web apps with React, Node.js, Express, MongoDB, and JavaScript." 
         />
         <meta name="twitter:image" content="https://mohammed-yaser-portfolio.vercel.app/og-image.png" />
         <meta name="twitter:image:alt" content="Mohammed Yaser - Full Stack Developer Portfolio" />

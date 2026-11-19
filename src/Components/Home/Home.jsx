@@ -51,7 +51,7 @@ const Home = () => {
         >
           <span className="home-role">Full Stack Developer</span>
           <p className="home-subtitle">
-            Full Stack Developer (React, Node.js, MongoDB) based in Nilambur, Kerala, India. Building modern, performant, and accessible web experiences.
+            Full Stack Developer (React, Node.js, MongoDB) based in Thrissur, Kerala, India. Building modern, performant, and accessible web experiences.
           </p>
         </motion.div>
 

@@ -70,7 +70,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <span className="contact-info-label">Location</span>
-                <span className="contact-info-val">Nilambur, Kerala, India</span>
+                <span className="contact-info-val">Thrissur, Kerala, India</span>
               </div>
             </div>
 

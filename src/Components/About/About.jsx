@@ -27,7 +27,7 @@ const About = () => {
         >
           <div className="about-text-content">
             <p className="about-paragraph">
-              I am Mohammed Yaser, a passionate Full Stack Developer based in Nilambur, Kerala, India. I specialize in building robust, modern web applications utilizing the MERN stack—MongoDB, Express.js, React, and Node.js—alongside JavaScript (ES6+), Redux, and responsive CSS frameworks.
+              I am Mohammed Yaser, a passionate Full Stack Developer based in Thrissur, Kerala, India. I specialize in building robust, modern web applications utilizing the MERN stack—MongoDB, Express.js, React, and Node.js—alongside JavaScript (ES6+), Redux, and responsive CSS frameworks.
             </p>
             <p className="about-paragraph">
               With a dedicated focus on frontend precision and clean backend API architecture, I enjoy transforming complex challenges into smooth, interactive, and high-performance digital products. My experience encompasses creating scalable web solutions with accessible code, intuitive user interfaces, and automated SEO best practices.
@@ -44,7 +44,7 @@ const About = () => {
               </div>
               <div className="highlight-info">
                 <span className="highlight-label">Location</span>
-                <span className="highlight-value">Nilambur, Kerala, India</span>
+                <span className="highlight-value">Thrissur, Kerala, India</span>
               </div>
             </div>
 
