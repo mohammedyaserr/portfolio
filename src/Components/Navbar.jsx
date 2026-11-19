@@ -99,9 +99,9 @@ const Navbar = () => {
             flexDirection: 'column',
             pt: 2, /* Reduced padding as we now have an internal header */
             px: 2,
-            background: 'rgba(255, 255, 255, 0.03)', 
-            backdropFilter: 'blur(40px) saturate(200%)',
-            WebkitBackdropFilter: 'blur(40px) saturate(200%)',
+            background: 'rgba(10, 10, 12, 0.6)', 
+            backdropFilter: 'blur(80px) saturate(150%)',
+            WebkitBackdropFilter: 'blur(80px) saturate(150%)',
             borderLeft: '1px solid rgba(255, 255, 255, 0.15)',
           }}
         >
