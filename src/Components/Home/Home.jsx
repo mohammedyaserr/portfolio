@@ -6,7 +6,7 @@ import './home.css';
 const Home = () => {
   return (
     <section className="home-section" id="home">
-      <div className="line-waves-wrapper">
+      <div className="line-waves-wrapper" aria-hidden="true">
         <LineWaves
           speed={0.3}
           innerLineCount={14}
@@ -50,7 +50,9 @@ const Home = () => {
           transition={{ delay: 0.6 }}
         >
           <span className="home-role">Full Stack Developer</span>
-
+          <p className="home-subtitle">
+            Full Stack Developer (React, Node.js, MongoDB) based in Nilambur, Kerala, India. Building modern, performant, and accessible web experiences.
+          </p>
         </motion.div>
 
         <motion.div 
@@ -59,8 +61,20 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
         >
-          <a href="#projects" className="btn-primary">View Projects</a>
-          <a href="mailto:mohammedyaserdev@gmail.com" className="btn-secondary">Hire Me</a>
+          <a 
+            href="#projects" 
+            className="btn-primary"
+            aria-label="View Mohammed Yaser's featured projects"
+          >
+            View Projects
+          </a>
+          <a 
+            href="mailto:mohammedyaserdev@gmail.com" 
+            className="btn-secondary"
+            aria-label="Send email to hire Mohammed Yaser"
+          >
+            Hire Me
+          </a>
         </motion.div>
       </motion.div>
     </section>

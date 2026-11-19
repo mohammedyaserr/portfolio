@@ -4,7 +4,7 @@ import './FlowingMenu.css';
 
 const FlowingMenu = ({ items = [] }) => {
   return (
-    <div className="flowing-menu-container">
+    <div className="flowing-menu-container" aria-label="Specialization highlights">
       <nav className="flowing-menu">
         {items.map((item, index) => (
           <MenuItem key={index} {...item} />
@@ -57,15 +57,24 @@ const MenuItem = ({ link, text, image }) => {
 
   return (
     <div className="flowing-menu-item" ref={itemRef}>
-      <a href={link} className="flowing-menu-link">
+      <a href={link} className="flowing-menu-link" aria-label={`Skill category: ${text}`}>
         <span className="flowing-menu-text">{text}</span>
       </a>
-      <div className="flowing-menu-marquee" ref={marqueeRef}>
+      <div className="flowing-menu-marquee" ref={marqueeRef} aria-hidden="true">
         <div className="flowing-menu-marquee-inner" ref={marqueeInnerRef}>
           {[...Array(8)].map((_, i) => (
             <span key={i} className="marquee-text">
               {text} 
-              {image && <img src={image} alt="" className="marquee-img" />}
+              {image && (
+                <img 
+                  src={image} 
+                  alt="" 
+                  className="marquee-img" 
+                  loading="lazy" 
+                  width="200"
+                  height="200"
+                />
+              )}
             </span>
           ))}
         </div>

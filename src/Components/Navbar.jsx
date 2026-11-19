@@ -37,16 +37,17 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
+    <motion.header 
       className="navbar-container"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 120, damping: 20 }}
     >
-      <div className="navbar-pill">
+      <nav className="navbar-pill" aria-label="Main Navigation">
         <motion.a 
           href="/" 
           className="nav-logo"
+          aria-label="Mohammed Yaser - Back to top"
         >
           <span>Mohammed Yaser</span>
         </motion.a>
@@ -54,6 +55,7 @@ const Navbar = () => {
         {isMobile ? (
           <IconButton 
             onClick={handleDrawerToggle}
+            aria-label="Open navigation menu"
             sx={{ color: 'var(--text-h)', '&:hover': { background: 'rgba(170, 59, 255, 0.1)' } }}
           >
             <MenuIcon />
@@ -65,6 +67,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="nav-link"
+                aria-label={`Navigate to ${item.name} section`}
                 whileHover={{ 
                   scale: 1.1,
                 }}
@@ -76,7 +79,7 @@ const Navbar = () => {
             ))}
           </div>
         )}
-      </div>
+      </nav>
 
       <Drawer
         anchor="right"
@@ -97,7 +100,7 @@ const Navbar = () => {
             height: '100%', 
             display: 'flex', 
             flexDirection: 'column',
-            pt: 2, /* Reduced padding as we now have an internal header */
+            pt: 2,
             px: 2,
             background: 'rgba(10, 10, 12, 0.6)', 
             backdropFilter: 'blur(80px) saturate(150%)',
@@ -144,6 +147,7 @@ const Navbar = () => {
 
             <IconButton 
               onClick={handleDrawerToggle} 
+              aria-label="Close navigation menu"
               sx={{ color: 'var(--text-h)', mt: -0.5 }}
             >
               <CloseIcon />
@@ -161,43 +165,46 @@ const Navbar = () => {
             }} 
           />
 
-          <List sx={{ width: '100%' }}>
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <ListItem disablePadding>
-                  <ListItemButton 
-                    href={item.href} 
-                    onClick={handleDrawerToggle}
-                    sx={{ 
-                      py: 1.5,
-                      borderRadius: '12px',
-                      color: 'var(--text-h)',
-                      '&:hover': { background: 'rgba(170, 59, 255, 0.1)' }
-                    }}
-                  >
-                    <ListItemIcon sx={{ color: 'var(--accent)', minWidth: '40px' }}>
-                      {item.icon}
-                    </ListItemIcon>
-                    <ListItemText 
-                      primary={item.name} 
-                      primaryTypographyProps={{ 
-                        style: {
-                          fontSize: '1.2rem', 
-                          fontWeight: 600,
-                          fontFamily: 'inherit'
-                        }
-                      }} 
-                    />
-                  </ListItemButton>
-                </ListItem>
-              </motion.div>
-            ))}
-          </List>
+          <nav aria-label="Mobile Navigation">
+            <List sx={{ width: '100%' }}>
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ListItem disablePadding>
+                    <ListItemButton 
+                      href={item.href} 
+                      onClick={handleDrawerToggle}
+                      aria-label={`Navigate to ${item.name} section`}
+                      sx={{ 
+                        py: 1.5,
+                        borderRadius: '12px',
+                        color: 'var(--text-h)',
+                        '&:hover': { background: 'rgba(170, 59, 255, 0.1)' }
+                      }}
+                    >
+                      <ListItemIcon sx={{ color: 'var(--accent)', minWidth: '40px' }}>
+                        {item.icon}
+                      </ListItemIcon>
+                      <ListItemText 
+                        primary={item.name} 
+                        primaryTypographyProps={{ 
+                          style: {
+                            fontSize: '1.2rem', 
+                            fontWeight: 600,
+                            fontFamily: 'inherit'
+                          }
+                        }} 
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </motion.div>
+              ))}
+            </List>
+          </nav>
 
           {/* Sidebar Footer */}
           <Box sx={{ mt: 'auto', pb: 4, px: 1 }}>
@@ -206,14 +213,16 @@ const Navbar = () => {
             </Box>
             <Box sx={{ display: 'flex', gap: 2 }}>
               {[
-                { icon: <GitHub sx={{ fontSize: 22 }} />, href: "https://github.com/mohammedyaserr" },
-                { icon: <LinkedIn sx={{ fontSize: 22 }} />, href: "https://www.linkedin.com/in/mohammed-yaser-59a044333/" },
-                { icon: <Email sx={{ fontSize: 22 }} />, href: "mailto:mohammedyaserdev@gmail.com" },
+                { icon: <GitHub sx={{ fontSize: 22 }} />, href: "https://github.com/mohammedyaserr", label: "Visit Mohammed Yaser on GitHub" },
+                { icon: <LinkedIn sx={{ fontSize: 22 }} />, href: "https://www.linkedin.com/in/mohammed-yaser-59a044333/", label: "Connect with Mohammed Yaser on LinkedIn" },
+                { icon: <Email sx={{ fontSize: 22 }} />, href: "mailto:mohammedyaserdev@gmail.com", label: "Send email to Mohammed Yaser" },
               ].map((social, i) => (
                 <motion.a
                   key={i}
                   href={social.href}
+                  aria-label={social.label}
                   target={social.href.startsWith('http') ? "_blank" : undefined}
+                  rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
                   whileHover={{ scale: 1.2, color: 'var(--accent)' }}
                   style={{ color: 'var(--text-h)', textDecoration: 'none' }}
                 >
@@ -224,7 +233,7 @@ const Navbar = () => {
           </Box>
         </Box>
       </Drawer>
-    </motion.nav>
+    </motion.header>
   );
 };
 

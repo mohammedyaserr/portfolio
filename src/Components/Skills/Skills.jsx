@@ -8,7 +8,9 @@ import {
   DataObject, 
   Settings, 
   Web, 
-  AutoAwesome 
+  AutoAwesome,
+  Source,
+  Api
 } from '@mui/icons-material';
 import './Skills.css';
 
@@ -20,8 +22,10 @@ const Skills = () => {
     { name: 'JavaScript', category: 'Language', icon: <Terminal /> },
     { name: 'Express', category: 'Backend', icon: <Layers /> },
     { name: 'Redux', category: 'State', icon: <DataObject /> },
-    { name: 'MUI', category: 'UI', icon: <Web /> },
+    { name: 'MUI', category: 'UI Library', icon: <Web /> },
     { name: 'Framer Motion', category: 'Animation', icon: <AutoAwesome /> },
+    { name: 'REST APIs', category: 'Architecture', icon: <Api /> },
+    { name: 'Git & GitHub', category: 'Version Control', icon: <Source /> }
   ];
 
   return (
@@ -32,6 +36,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <span className="skills-label">Capabilities</span>
           <h2 className="skills-title">Tech Stack</h2>
@@ -42,7 +47,7 @@ const Skills = () => {
             <motion.div
               key={skill.name}
               className="skill-badge"
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ 
                 y: -5,
@@ -50,7 +55,7 @@ const Skills = () => {
                 boxShadow: '0 0 20px rgba(170, 59, 255, 0.2)'
               }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
+              transition={{ delay: index * 0.04 }}
             >
               <div className="skill-icon">{skill.icon}</div>
               <div className="skill-info">
